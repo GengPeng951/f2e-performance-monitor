@@ -1,0 +1,31 @@
+{
+  "name": "performance-report-log",
+  "version": "1.0.0",
+  "description": "前端性能上报组件包",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "babel index.js --watch --out-file ./dist/index.js",
+    "start": "babel index.js --watch --out-file ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GengPeng951/f2e-performance-monitor.git"
+  },
+  "keywords": [
+    "performace"
+  ],
+  "author": "951565664@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GengPeng951/f2e-performance-monitor/issues"
+  },
+  "homepage": "https://github.com/GengPeng951/f2e-performance-monitor#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.3"
+  }
+}
