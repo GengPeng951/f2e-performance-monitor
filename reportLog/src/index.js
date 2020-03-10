@@ -2,12 +2,6 @@ export default class PerformanceReport {
     constructor(props) {
         this.pageName = props.name
         this.reportLog = props.reportLog
-        const newOnload = () => {
-            window.onload()
-            this.report()
-            console.log(44)
-        }
-        window.onload = newOnload
     }
 
     report() {
