@@ -10,7 +10,8 @@
           "ie": 9
         }
       }
-    ]
+    ],
+    "@babel/preset-typescript"
   ],
   "plugins": ["@babel/plugin-transform-runtime"],
   "env": {

@@ -2,12 +2,15 @@
   "name": "performance-report-log",
   "version": "1.0.0",
   "description": "performance-report-log",
-  "main": "./dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "clean": "rm -rf dist lib",
-    "build": "npm run clean &&npm run build:lib && npm run build:esm",
-    "build:lib": "babel src --out-dir lib --ignore src/__tests__/",
-    "build:esm": "cross-env BABEL_ENV=esm-dir babel src --out-dir es --ignore src/__tests__/"
+    "clean": "rm -rf es lib",
+    "build": "npm run clean && npm run build:lib && npm run build:esm && npm run build:types",
+    "build:types": "npm run build:lib.types && npm run build:esm.types",
+    "build:lib.types": "cross-env NODE_ENV=production tsc --project tsconfig.json --outDir lib",
+    "build:esm.types": "cross-env NODE_ENV=production tsc --project tsconfig.json --outDir es",
+    "build:lib": "babel src --out-dir lib --extensions '.ts,.tsx' --ignore src/__tests__/ ",
+    "build:esm": "cross-env BABEL_ENV=esm-dir babel src --out-dir es --extensions '.ts,.tsx' --ignore src/__tests__/ "
   },
   "repository": {
     "type": "git",
@@ -25,8 +28,10 @@
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.6",
-    "@babel/preset-env": "^7.8.6",
     "@babel/plugin-transform-runtime": "^7.8.3",
-    "@babel/polyfill": "^7.8.3"
+    "@babel/plugin-transform-typescript": "^7.8.7",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-typescript": "^7.8.3"
   }
 }
