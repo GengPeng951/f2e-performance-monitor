@@ -1,0 +1,42 @@
+{
+  "name": "video-spider",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "DEPLOY_ENV=local nodemon --watch 'src/**/*' -e ts --exec ts-node --log-error --files ./src/main.ts",
+    "build": "rm -rf dist && tsc"
+  },
+  "repository": "https://github.com/GengPeng951/video-spider.git",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/joi": "^15.1.1",
+    "@types/cheerio": "^0.22.16",
+    "@types/puppeteer": "^2.0.0",
+    "@types/superagent": "^4.1.7",
+    "chalk": "^3.0.0",
+    "cheerio": "^1.0.0-rc.3",
+    "fs-extra": "^8.1.0",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.6",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.14.0",
+    "superagent": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^8.0.0",
+    "@types/hapi__joi": "^15.0.3",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-router": "^7.0.42",
+    "@types/koa2-cors": "^2.0.1",
+    "@types/node": "^12.7.1",
+    "lint-staged": "^8.1.7",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.17.1",
+    "ts-node": "^8.2.0",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1"
+  }
+}

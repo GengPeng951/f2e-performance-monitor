@@ -1,0 +1,27 @@
+{
+  "apps": [
+    {
+      "name": "xxx",
+      "script": "./dist/main.js",
+      "merge_logs": true,
+      "log_file": "/dev/log_file",
+      "out_file": "/dev/out_file",
+      "error_file": "/dev/error_file",
+      "min_uptime": 35000,
+      "max_restarts": 5,
+      "instances": 0,
+      "env_production": {
+        "DEPLOY_ENV": "production",
+        "NODE_ENV": "production"
+      },
+      "env_testing": {
+        "DEPLOY_ENV": "testing",
+        "NODE_ENV": "production"
+      },
+      "env_local": {
+        "DEPLOY_ENV": "local",
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}
