@@ -3,7 +3,7 @@ export interface BaseLogProps {
 }
 export interface BaseLogData {
   userAgent: Navigator["userAgent"];
-  pageInfo: { pageName: string };
+  pageName?: string;
 }
 export default class BaseLog {
   pageName: string;
@@ -15,7 +15,7 @@ export default class BaseLog {
   _getBaseData(): BaseLogData {
     return {
       userAgent: navigator.userAgent,
-      pageInfo: { pageName: this.pageName }
+      pageName: this.pageName
       /* 用户访问地址的方式 */
     };
   }

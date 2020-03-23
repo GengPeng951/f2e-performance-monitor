@@ -1,5 +1,18 @@
 ## 收集的数据
 
+分为基本数据和性能数据
+
+### 基本数据
+
+- useAgent
+- 页面信息
+
+---
+
+### 性能数据
+
+---
+
 #### 页面加载完成的时间 `loadPage`
 
 代表了用户等待页面可用的时间 `t.loadEventEnd - t.navigationStart`
@@ -32,7 +45,3 @@ DNS 预加载做了么？页面内是不是使用了太多不同的域名导致�
 - 1 TYPE_RELOAD The page was accessed by clicking the Reload button or via the Location.reload() method.
 - 2 TYPE_BACK_FORWARD The page was accessed by navigating into the history.
   `navigation.type`
-
-## 数据库设计
-
-在收集数据的基础上 增加 isDelete 和
